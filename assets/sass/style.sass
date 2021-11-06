@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap')
+@import 'fontello.css'
+
+$first-color: #FED100
+$second-color: #FFFFFF
+$third-color: #333333
+
+*
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+
+nav
+	padding-top: 40px
+	background-color: $first-color
+.nav-panel
+	&__body
+		display: flex
+		flex-direction: row
+		justify-content: space-evenly
+		align-items: center
+	&__logo
+		text-transform: uppercase
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 600
+		font-size: 30px
+		line-height: 37px
+		color: $third-color
+	&__menu
+		max-width: 882px
+		&-body
+			display: grid
+			grid-template-columns: 2fr 2fr 2fr 3fr 3fr
+	&__item
+		display: inline-block
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: $third-color
+	&__phone
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 600
+		font-size: 24px
+		color: #000
+.menu
+	display: none
+	border: none
+	text-decoration: none
+	float: right
+	order: 1
+	z-index: 1000
+	background-color: $first-color
+	&:before
+		content: '\e804'
+		font-family: "fontello"
+		font-style: normal
+		font-weight: normal
+		font-size: 30px
+.nav-panel_noactive
+	display: grid
+.home
+	background-color: $first-color
+	&__body
+		display: flex
+		flex-direction: row
+		justify-content: space-evenly
+		align-items: center
+	&__content
+		display: flex
+		flex-direction: column
+		max-width: 546px	
+	&__title
+		margin-bottom: 50px
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: bold
+		font-size: 70px
+		line-height: 126.9%
+		color: $third-color
+		& span
+			font-weight: 600
+			font-size: 30px
+			line-height: 37px
+	&__btn-order
+		position: relative
+		margin-top: 10px
+		max-width: 286.969px
+		max-height: 56px
+		border: 1px solid $second-color
+		color: $first-color
+		background: $first-color
+	&__btn-order_2
+		position: relative
+		padding: 16px 96px
+		margin-top: -45px
+		margin-left: -4%
+		z-index: 10000
+		border: none
+		color: $second-color
+		background: #FF352B
+	&__description
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		margin-top: 66px
+	&__item
+		display: grid
+		grid-template-columns: 1fr 2fr
+		align-items: center
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 21px
+		color: $third-color
+	&__icons
+		display: block
+		max-width: 100%
+		width: 509px
+		&:after
+			position: absolute
+			top: 180px
+			display: block
+			max-width: 100%
+			width: inherit
+			height: 310px
+			content: ''
+			background: url('../img/home__icon_2.png') no-repeat
+			background-position: center center
+			background-size: cover
+	&__icon
+		position: relative
+		margin-bottom: -3px
+		z-index: 1000
+	&__phone
+		margin-top: 420px
+		padding: 24px
+		background-color: rgba(61, 155, 233, 0.8)
+		border: none
+		border-radius: 50%
+		box-shadow: 0 0 0 18px rgba(61, 155, 233, 0.3)
+		&:before
+			content: url(../img/phone.png)
+.btn-order
+	vertical-align: middle
+	text-align: center
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 500
+	font-size: 20px
+	line-height: 24px
+@media screen and (max-width: 1024px)
+	nav
+		padding-top: 27px
+	.nav-panel
+		&__body
+			justify-content: space-between
+			margin-left: 2%
+			margin-right: 2%
+		&__logo
+			font-size: 16px
+			line-height: 27px
+		&__menu
+			position: fixed
+			right: 2%
+			top: 27px
+			text-align: right
+			&-body
+				margin-top: 40px
+				display: grid
+				grid-template-columns: 1fr 
+		&__item
+			font-size: 12px
+			line-height: 27px
+		&__phone
+			font-size: 16px
+			line-height: 27px
+	.menu
+		display: block
+	.hide_menu
+		display: none
+	.home
+		background-color: $first-color
+		&__body
+			margin-left: 5%
+			margin-right: 5%
+		&__content
+			text-align: center
+			order: 1001		
+		&__title
+			& span
+				font-size: 18px
+				line-height: 22px
+		&__description
+			display: none
+		&__icons
+			text-align: center
+			order: 1000
+			&:after
+				display: none
+		&__icon
+			display: inline-block
+			max-width: 100%
+			width: 248px
+			height: 396px
+			position: relative
+			z-index: 1000
+			margin-bottom: -3px
+		&__contacts 
+		&__phone
+			display: none
+@media screen and (max-width: 500px)
+	.home__btn-order_2
+		// margin-left: 5%
