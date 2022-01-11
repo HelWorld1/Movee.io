@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap')
 @import 'fontello.css'
+/* SASS */
 
 $first-color: #FED100
 $second-color: #FFFFFF
@@ -11,6 +12,12 @@ $third-color: #333333
 
 a
 	text-decoration: none
+
+button
+	text-decoration: none
+	background-color: #fff
+	border: none
+	cursor: pointer
 
 nav
 	padding-top: 40px
@@ -35,7 +42,7 @@ nav
 	font-weight: 600
 	font-size: 24px
 	line-height: 29px
-// nav-panel menu
+/* nav-panel menu */
 .nav-panel
 	&__body
 		display: flex
@@ -116,7 +123,7 @@ nav
 	.hide_menu
 		display: none
 
-// block "Home"
+/* block "Home" */
 .home
 	background-color: $first-color
 	&__body
@@ -236,7 +243,7 @@ nav
 		&__phone
 			display: none
 
-// process block
+/* process block */
 .process
 	text-align: left
 	display: flex
@@ -327,7 +334,7 @@ nav
 			p
 				display: none
 
-// block "Price"
+/* block "Price" */
 .price
 	display: flex
 	justify-content: center
@@ -374,6 +381,7 @@ nav
 		background-color: $first-color
 		border: 0
 		cursor: pointer
+		color: $third-color
 	&__footer
 		display: none
 @media screen and (max-width: 1024px)
@@ -425,3 +433,447 @@ nav
 			line-height: 131.4%
 			color: $third-color
 			border-bottom: 1px solid $third-color
+
+/* block "Autopark" */
+.autopark
+	display: flex
+	justify-content: center
+	flex-direction: column
+	text-align: center
+	&__header
+		margin-top: 102px
+	&__title 
+	&__description
+		margin-top: 15px
+	&__list
+		margin-top: 60px
+		margin-left: 25%
+		margin-right: 25%
+		display: flex
+		align-items: center
+		justify-content: space-around
+		flex-direction: row
+		text-align: center
+		a
+			padding: 13px 64px
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 24px
+			border: 1px solid #EBEBEB
+			color: $third-color
+			&:hover,
+			&:focus,
+			&:active
+				border: 1px solid $first-color
+	&__body
+		margin-top: 47px
+		display: flex
+		justify-content: center
+		flex-direction: row
+		align-items: center
+	&__slider
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__arrow
+		padding: 15px
+		font-family: 'fontello'
+		font-size: 18px
+		color: #000
+	&__arrow-left
+		margin-right: 96px
+		&:after
+			content: '\e800'
+	&__arrow-right
+		margin-left: 96px
+		&:after
+			content: '\e801'
+	&__content 
+	&__item
+		display: flex
+		justify-content: center
+		flex-direction: row
+		align-items: flex-start
+		text-align: left
+		img
+			max-width: 100%
+			width: 100%
+			min-width: 321px
+	&__specifications
+		margin-top: 50px
+		display: flex
+		justify-content: flex-start
+		flex-direction: column
+		h4
+			margin-bottom: 37px
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 600
+			font-size: 24px
+			line-height: 29px
+			color: $third-color
+		p
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 21px
+			color: $third-color
+			&:before
+				margin-right: 15.57px
+				font-family: 'fontello'
+				font-size: 18px
+				content: '\e805'
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		min-height: 168px
+	&__slider-mobile
+		display: none
+		flex-direction: row
+		justify-content: space-between
+		button
+			display: block
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background-color: #000
+			cursor: pointer
+			&:hover,
+			&:focus,
+			&:active
+				border: 1px solid $first-color
+	&__btn-order
+		margin-top: 35px
+		padding: 14px 77px
+		background-color: $first-color
+		border: 0
+		cursor: pointer
+		color: $third-color
+.hide_item
+	display: none
+@media screen and (max-width: 1024px)
+	.autopark
+		&__header 
+		&__title
+			font-size: 20px
+			line-height: 24px
+		&__description 
+			display: none
+		&__list
+			margin-left: 5%
+			margin-right: 0
+			a
+				padding: 0px 0px
+				font-family: 'Montserrat'
+				font-style: normal
+				font-weight: 500
+				font-size: 16px
+				line-height: 20px
+				border: none
+				color: $third-color
+				&:hover,
+				&:focus,
+				&:active
+					border: none
+					border-bottom: 1px solid $first-color
+		&__body
+			flex-direction: column
+		&__slider 
+		&__arrow
+			display: none
+		&__arrow-left
+		&__arrow-right
+		&__content
+			flex-direction: column
+		&__item
+			text-align: center
+			align-items: center
+			flex-direction: column
+			img
+				order: 1
+		&__specifications
+			order: 2
+			flex-direction: column
+			h4
+				display: none
+			p
+				font-size: 12px
+				line-height: 15px
+				&:before
+					content: ''
+		&__text
+			display: none
+		&__slider-mobile
+			margin-top: 30px
+			display: flex
+		&__btn-order
+			font-size: 20px
+			line-height: 24px
+/* block "Reviews" */
+.reviews
+	padding-bottom: 107px
+	margin-top: 130px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	color: $third-color
+	background-color: $first-color
+	&__header
+		margin-top: 100px
+		text-align: center
+	&__title 
+	&__body
+		margin-top: 60px
+		display: flex
+		justify-content: space-around
+	&__item
+		&:first-child
+			max-width: 19.82%
+		&:nth-child(2)
+			max-width: 21.41%
+		&:last-child
+			max-width: 22%
+		h3
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 600
+			font-size: 24px
+			line-height: 29px
+	&__assessment
+		margin-top: 10px 
+	&__time
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 21px
+	&__star
+		display: inline-block
+		font-family: 'fontello'
+		font-size: 18px
+		color: #E5E5E5
+		background: none
+		&:before
+			content: '\e802'
+	&__star-active
+		color: #FF352B
+	&__content
+		margin-top: 20px
+		p
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 100
+			font-size: 14px
+			line-height: 21px
+	&__item:first-child
+		p
+			margin-bottom: 18px
+	&__item:nth-child(2)
+		p
+			margin-bottom: 38px
+	&__item:last-child
+		p
+			margin-bottom: 32px
+	&__read-full
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 21px
+		color: $third-color
+		border-bottom: 1px solid $third-color
+	&__footer
+		margin-top: 72px
+		text-align: center
+	&__all-reviews
+		padding: 13px 64px
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 500
+		font-size: 20px
+		line-height: 24px
+		border: 1px solid $third-color
+		background: none
+@media screen and (max-width: 1024px)
+	.reviews
+		&__header
+			margin-top: 40px 
+		&__title
+			font-weight: 600
+			font-size: 20px
+			line-height: 24px
+		&__body
+			justify-content: space-evenly
+			margin-top: 40px
+		&__item
+			&:first-child,
+			&:last-child
+				display: none
+			&:nth-child(2)
+				min-width: 281px
+			h3
+				font-size: 18px
+				line-height: 22px
+		&__assessment
+		&__time
+			font-size: 14px
+			line-height: 21px 
+		&__star
+			font-size: 16px 
+		&__star-active 
+		&__content
+			p
+				font-size: 14px
+				line-height: 21px
+		&__read-full
+			margin-top: 15px 
+			font-size: 16px
+			line-height: 131.4%
+		&__footer
+			margin-top: 63px
+		&__all-reviews
+			font-size: 20px
+			line-height: 24px
+/* block "Intermediate" */
+.intermediate
+	padding-top: 124px
+	padding-bottom: 124px
+	display: flex
+	justify-content: center
+	flex-direction: column
+	&__content
+		margin-left: 15%
+		margin-right: 15%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__title
+	&__description
+		margin-top: 10px
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 21px
+	&__form
+		margin-top: 47px
+		width: 100%
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		input[type='text']
+			max-height: 34px
+			margin-right: 20%
+			padding-bottom: 10px
+			border: none
+			border-bottom: 1px solid $third-color
+	&__call-me
+		position: relative
+		max-width: 280px
+		max-height: 56px
+		border: 1px solid $first-color
+		color: $second-color
+		background: $second-color
+	&__call-me_2
+		position: relative
+		padding: 13px 43px
+		margin-top: -35px
+		margin-left: -1%
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 500
+		font-size: 20px
+		line-height: 24px
+		z-index: 10000
+		border: none
+		color: $second-color
+		background: #FF352B
+	input[type='checkbox']
+		&:checked,
+		&:not(:checked)
+			position: absolute
+		&:checked + label, 
+		&:not(:checked) + label
+			display: inline-block
+			position: relative
+			padding-left: 28px
+			cursor: pointer
+		&:checked:before,
+		&:not(:checked):before
+			content: ""
+			position: absolute
+			left: 0px
+			top: 0px
+			width: 18px
+			height: 18px
+			border: 1px solid #dddddd
+			background-color: #ffffff
+		&:checked:after
+			content: ""
+			position: absolute
+			-webkit-transition: all 0.2s ease
+			-moz-transition: all 0.2s ease
+			-o-transition: all 0.2s ease
+			transition: all 0.2s ease
+			left: 3px
+			top: 4px
+			width: 10px
+			height: 5px
+			border-radius: 1px
+			border-left: 4px solid #000
+			border-bottom: 4px solid #000
+			transform: rotate(-45deg)
+			-webkit-transform: rotate(-45deg)
+			-moz-transform: rotate(-45deg)
+			-o-transform: rotate(-45deg)
+			-ms-transform: rotate(-45deg)
+	label
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 12px
+		line-height: 15px
+		letter-spacing: 0.015em
+@media screen and (max-width: 1024px)
+	.intermediate
+		padding-top: 62px
+		padding-bottom: 62px
+		text-align: center
+		&__content
+			margin-left: 5%
+			margin-right: 5%
+		&__title
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 600
+			font-size: 20px
+			line-height: 24px
+			text-align: center
+		&__description
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: normal
+			font-size: 15px
+			line-height: 131.4%
+		&__form
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			input[type='text']
+				margin-right: 0
+				&:nth-child(2)
+					margin-top: 40px
+					margin-bottom: 60px
+			span
+				text-align: left
+		&__call-me
+		&__call-me_2
+			font-family: 'Montserrat'
+			font-style: normal
+			font-weight: 500
+			font-size: 20px
+			line-height: 24px
+		input[type='checkbox']
