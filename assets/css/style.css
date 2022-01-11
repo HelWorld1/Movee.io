@@ -1226,3 +1226,7 @@ nav {
     line-height: 24px;
   }
 }
+#map {
+  width: 40px;
+  height: 40px;
+}
