@@ -22,12 +22,33 @@ button
 nav
 	padding-top: 40px
 	background-color: $first-color
+.logo
+	text-transform: uppercase
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 600
+	font-size: 30px
+	line-height: 37px
+	color: $third-color
 .title
 	font-family: 'Montserrat'
 	font-style: normal
 	font-weight: 600
 	font-size: 30px
 	line-height: 37px
+.description
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 600
+	font-size: 24px
+	line-height: 29px
+.text
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 130.4%
+	color: $third-color
 .btn-order
 	vertical-align: middle
 	text-align: center
@@ -36,12 +57,45 @@ nav
 	font-weight: 500
 	font-size: 20px
 	line-height: 24px
-.description
+.btn-order_2
+	padding: 13px 64px
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 500
+	font-size: 20px
+	line-height: 24px
+	border: 1px solid $third-color
+	background: none
+.social
+	color: $third-color
+	&:before
+		margin-right: 10px
+		font-family: 'fontello'
+		font-size: 22px
+	&:nth-child(1):before
+		content: '\f16a'
+	&:nth-child(2):before
+		font-size: 17px
+		content: '\e803'
+	&:nth-child(3):before
+		font-size: 20px
+		content: '\f30e'
+	&:nth-child(4):before
+		content: '\f16d'
+.mail
+	display: block
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: normal
+	font-size: 16px
+	line-height: 24px
+	color: $third-color
+.phone
 	font-family: 'Montserrat'
 	font-style: normal
 	font-weight: 600
 	font-size: 24px
-	line-height: 29px
+	color: #000
 /* nav-panel menu */
 .nav-panel
 	&__body
@@ -49,14 +103,6 @@ nav
 		flex-direction: row
 		justify-content: space-evenly
 		align-items: center
-	&__logo
-		text-transform: uppercase
-		font-family: 'Montserrat'
-		font-style: normal
-		font-weight: 600
-		font-size: 30px
-		line-height: 37px
-		color: $third-color
 	&__menu
 		max-width: 882px
 		&-body
@@ -76,7 +122,7 @@ nav
 		font-weight: 600
 		font-size: 24px
 		color: #000
-.menu
+.menu__btn
 	display: none
 	border: none
 	text-decoration: none
@@ -442,7 +488,7 @@ nav
 	text-align: center
 	&__header
 		margin-top: 102px
-	&__title 
+	&__title
 	&__description
 		margin-top: 15px
 	&__list
@@ -531,6 +577,8 @@ nav
 		flex-direction: column
 		justify-content: space-between
 		min-height: 168px
+		&-hide
+			display: none
 	&__slider-mobile
 		display: none
 		flex-direction: row
@@ -607,6 +655,8 @@ nav
 					content: ''
 		&__text
 			display: none
+			&-hide
+				display: block
 		&__slider-mobile
 			margin-top: 30px
 			display: flex
@@ -689,15 +739,6 @@ nav
 	&__footer
 		margin-top: 72px
 		text-align: center
-	&__all-reviews
-		padding: 13px 64px
-		font-family: 'Montserrat'
-		font-style: normal
-		font-weight: 500
-		font-size: 20px
-		line-height: 24px
-		border: 1px solid $third-color
-		background: none
 @media screen and (max-width: 1024px)
 	.reviews
 		&__header
@@ -877,7 +918,141 @@ nav
 			font-size: 20px
 			line-height: 24px
 		input[type='checkbox']
+/* block "Map" */
 #map
 	display: block
 	width: 100%
 	height: 666px
+.map
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		min-height: 163px
+		padding: 14px 11.5px
+		border: 0px solid #000
+	&__title
+		font-weight: 600
+		font-size: 30px
+		line-height: 37px
+		text-transform: uppercase
+	&__info
+		margin-top: 40px
+	&__item
+		display: block
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: $third-color
+		&:before
+			margin-right: 15.57px
+			font-family: 'fontello'
+			font-size: 18px
+			content: '\e805'
+			color: $first-color
+	&__social-network
+		margin-top: 27px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	&__footer
+		display: none
+@media screen and (max-width: 500px)
+	.map
+		&__footer
+			display: block
+		&__info
+			margin-left: 10%
+			margin-right: 10%
+		&__item
+			&:before
+				margin-right: 0
+				content: ''
+/* footer */
+.footer
+	padding: 100px 0px
+	display: flex
+	justify-content: space-evenly
+	align-items: center
+	background-color: $first-color
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&:nth-child(1)
+			min-height: 199px
+		&:nth-child(2)
+			min-height: 180px
+		&:nth-child(3)
+			min-height: 199px
+		&:nth-child(4)
+			text-align: center
+			min-height: 199px
+	.menu__btn
+		display: none
+		border: none
+		text-decoration: none
+		float: right
+		order: 1
+		z-index: 1000
+		background: none
+		&:before
+			content: '\e804'
+			font-family: "fontello"
+			font-style: normal
+			font-weight: normal
+			font-size: 30px
+	&__social-network
+		display: flex
+		justify-content: space-between
+		vertical-align: top
+		align-items: center
+	&__body
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+.footer-panel
+	&__body
+		display: flex
+		flex-direction: row
+		justify-content: space-evenly
+		align-items: center
+	&__menu
+		max-width: 882px
+		&-body
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			min-height: 180px
+	&__item
+		display: inline-block
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: $third-color
+	&__phone
+		font-family: 'Montserrat'
+		font-style: normal
+		font-weight: 600
+		font-size: 24px
+		color: #000
+@media screen and (max-width: 1024px)
+	.footer
+		flex-direction: column
+		text-align: center
+		justify-content: space-between
+		min-height: 614px
+		&__item
+			&:nth-child(1)
+				min-height: 173px
+			&:nth-child(2)
+				min-height: 180px
+			&:nth-child(3)
+				min-height: 62px
+			&:nth-child(4)
+				text-align: center
+				min-height: 106px
